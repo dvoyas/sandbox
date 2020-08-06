@@ -13,6 +13,7 @@ def is_stressful(subj):
                 s_new += s[i]
         if s_new in red_words:
             return True
+
     return subj.isupper() or subj.endswith('!!!')
 
     # return (subj.isupper() or
