@@ -5,7 +5,6 @@ def count_digits(text: str) -> int:
 
     return count
 
-
 if __name__ == '__main__':
     print("Example:")
     print(count_digits('hi'))
