@@ -14,8 +14,8 @@ def words_order(text: str, words: list) -> bool:
     return res and i == len(words) and len(set(words)) == len(words)
 
     # THE BEST SOLUTION
-    text_words = {w for w in text.split() if w in words}
-    return list(sorted(text_words, key=text.index)) == words
+    # text_words = {w for w in text.split() if w in words}
+    # return list(sorted(text_words, key=text.index)) == words
 
 if __name__ == '__main__':
     print("Example:")
