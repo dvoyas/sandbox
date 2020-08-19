@@ -24,6 +24,10 @@ def sort_by_ext(files: List[str]) -> List[str]:
 
 
 # OTHER SOLUTIONS
+# BEST
+#     skey = lambda s: (bool(s[:(i:=s.rfind('.'))]), s[i+1:], s[:i])
+#     return sorted(files,key=skey)
+
 #     1
 #     return sorted(files,key=lambda x:(bool(i:=x.rfind('.')),x[i+1:],x[:i]))
 
