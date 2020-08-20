@@ -1,31 +1,131 @@
-# Your optional code here
-# You can import some modules or create additional functions
+# # Taken from mission Acceptable Password V
+#
+# # Taken from mission Acceptable Password IV
+#
+# # Taken from mission Acceptable Password III
+#
+# # Taken from mission Acceptable Password II
+#
+# # Taken from mission Acceptable Password I
+#
+# def is_acceptable_password(password: str) -> bool:
+#     # your code here
+#     return len(password) > 6
+#
+#
+# if __name__ == '__main__':
+#     print("Example:")
+#     print(is_acceptable_password('short'))
+#
+#     # These "asserts" are used for self-checking and not for an auto-testing
+#     assert is_acceptable_password('short') == False
+#     assert is_acceptable_password('muchlonger') == True
+#     assert is_acceptable_password('ashort') == False
+#     print("Coding complete? Click 'Check' to earn cool rewards!")
+#
+#
+# def is_acceptable_password(password: str) -> bool:
+#     # your code here
+#     return len(password) > 6 and any(char.isdigit() for char in password)
+#
+#
+# if __name__ == '__main__':
+#     print("Example:")
+#     print(is_acceptable_password('short'))
+#
+#     # These "asserts" are used for self-checking and not for an auto-testing
+#     assert is_acceptable_password('short') == False
+#     assert is_acceptable_password('muchlonger') == False
+#     assert is_acceptable_password('ashort') == False
+#     assert is_acceptable_password('muchlonger5') == True
+#     assert is_acceptable_password('sh5') == False
+#     print("Coding complete? Click 'Check' to earn cool rewards!")
+#
+# def is_acceptable_password(password: str) -> bool:
+#     # your code here
+#     return len(password) > 6 and any(char.isdigit() for char in password) and password.isdigit() == False
+#
+#
+# if __name__ == '__main__':
+#     print("Example:")
+#     print(is_acceptable_password('short'))
+#
+#     # These "asserts" are used for self-checking and not for an auto-testing
+#     assert is_acceptable_password('short') == False
+#     assert is_acceptable_password('muchlonger') == False
+#     assert is_acceptable_password('ashort') == False
+#     assert is_acceptable_password('muchlonger5') == True
+#     assert is_acceptable_password('sh5') == False
+#     assert is_acceptable_password('1234567') == False
+#     print("Coding complete? Click 'Check' to earn cool rewards!")
+#
+# def is_acceptable_password(password: str) -> bool:
+#     # your code here
+#     return (len(password) > 6 and any(char.isdigit() for char in password) and password.isdigit() == False) or len(password) > 9
+#
+#
+# if __name__ == '__main__':
+#     print("Example:")
+#     print(is_acceptable_password('short'))
+#
+#     # These "asserts" are used for self-checking and not for an auto-testing
+#     assert is_acceptable_password('short') == False
+#     assert is_acceptable_password('short54') == True
+#     assert is_acceptable_password('muchlonger') == True
+#     assert is_acceptable_password('ashort') == False
+#     assert is_acceptable_password('muchlonger5') == True
+#     assert is_acceptable_password('sh5') == False
+#     assert is_acceptable_password('1234567') == False
+#     assert is_acceptable_password('12345678910') == True
+#     print("Coding complete? Click 'Check' to earn cool rewards!")
+#
+#
+# def is_acceptable_password(a):
+#     return ((len(a) > 6 and any(char.isdigit() for char in a) and a.isdigit() == False) or len(a) > 9) and 'PASSWORD' not in a.upper()
+#
+#
+# if __name__ == '__main__':
+#     print("Example:")
+#     print(is_acceptable_password('short'))
+#
+#     # These "asserts" are used for self-checking and not for an auto-testing
+#     assert is_acceptable_password('short') == False
+#     assert is_acceptable_password('short54') == True
+#     assert is_acceptable_password('muchlonger') == True
+#     assert is_acceptable_password('ashort') == False
+#     assert is_acceptable_password('muchlonger5') == True
+#     assert is_acceptable_password('sh5') == False
+#     assert is_acceptable_password('1234567') == False
+#     assert is_acceptable_password('12345678910') == True
+#     assert is_acceptable_password('password12345') == False
+#     assert is_acceptable_password('PASSWORD12345') == False
+#     assert is_acceptable_password('pass1234word') == True
+#     print("Coding complete? Click 'Check' to earn cool rewards!")
+
+def is_acceptable_password(a):
+    # your code here
+    return (((len(a) > 6 and any(char.isdigit() for char in a) and a.isdigit() == False) or len(a) > 9) and 'PASSWORD' not in a.upper()) and len(set(a)) > 2
 
 
-def checkio(data: list) -> list:
-    # Your code here
-    # It's main function. Don't remove this function
-    # It's used for auto-testing and must return a result for check.
+if __name__ == '__main__':
+    print("Example:")
+    print(is_acceptable_password('aaaaaabbbbb'))
 
-    # replace this for solution
-    data_new = []
-    for i in range(len(data)):
-        data_new.append(data[i]) if data[i] in data[:i] + data[i+1:] else None
-    return data_new
-
-# Some hints
-# You can use list.count(element) method for counting.
-# Create new list with non-unique elements
-# Loop over original list
-
-
-if __name__ == "__main__":
-    # checkio([1, 2, 3, 1, 3])
-    print(checkio([1, 2, 3, 1, 3]))
-
-    # These "asserts" using only for self-checking and not necessary for auto-testing
-    assert list(checkio([1, 2, 3, 1, 3])) == [1, 3, 1, 3], "1st example"
-    assert list(checkio([1, 2, 3, 4, 5])) == [], "2nd example"
-    assert list(checkio([5, 5, 5, 5, 5])) == [5, 5, 5, 5, 5], "3rd example"
-    assert list(checkio([10, 9, 10, 10, 9, 8])) == [10, 9, 10, 10, 9], "4th example"
-    print("It is all good. Let's check it now")
+    # These "asserts" are used for self-checking and not for an auto-testing
+    assert is_acceptable_password('short') == False
+    assert is_acceptable_password('short54') == True
+    assert is_acceptable_password('muchlonger') == True
+    assert is_acceptable_password('ashort') == False
+    assert is_acceptable_password('muchlonger5') == True
+    assert is_acceptable_password('sh5') == False
+    assert is_acceptable_password('1234567') == False
+    assert is_acceptable_password('12345678910') == True
+    assert is_acceptable_password('password12345') == False
+    assert is_acceptable_password('PASSWORD12345') == False
+    assert is_acceptable_password('pass1234word') == True
+    assert is_acceptable_password('aaaaaa1') == False
+    assert is_acceptable_password('aaaaaabbbbb') == False
+    assert is_acceptable_password('aaaaaabb1') == True
+    assert is_acceptable_password('abc1') == False
+    assert is_acceptable_password('abbcc12') == True
+    print("Coding complete? Click 'Check' to earn cool rewards!")
