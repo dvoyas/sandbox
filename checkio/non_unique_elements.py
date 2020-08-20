@@ -18,6 +18,10 @@ def checkio(data: list) -> list:
 # Create new list with non-unique elements
 # Loop over original list
 
+#  THE BEST SOLUTION
+    #return [i for i in data if data.count(i) > 1]
+
+
 
 if __name__ == "__main__":
     # checkio([1, 2, 3, 1, 3])
