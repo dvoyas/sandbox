@@ -19,6 +19,8 @@ def is_ascending(items: Iterable[int]) -> bool:
 # OTHER SOLUTIONS
 #     return all(items[x]>items[x-1]for x in range(1,len(items)))
 
+# THE BEST SOLUTION
+#     return all(items[i] < items[i+1] for i in range(len(items)-1))
 
 
 if __name__ == '__main__':
