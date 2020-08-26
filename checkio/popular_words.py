@@ -1,12 +1,19 @@
 def popular_words(text: str, words: list) -> dict:
-    result = {}
-    for i in range(0, len(words)):
-        result[words[i]] = text.lower().split().count(words[i])
+    # result = {}
+    # for i in range(0, len(words)):
+    #     result[words[i]] = text.lower().split().count(words[i])
+
+        lower_count = text.lower().split().count
+        return {word: lower_count(word) for word in words}
 
     #all(countw.append(text.lower().split().count(words[x])) for x in range(1, len(words)))
 
+    # return result
 
-    return result
+
+# THE BEST SOLUTION
+#     lower_count = text.lower().split().count
+#     return {word: lower_count(word) for word in words}
 
 
 if __name__ == '__main__':
