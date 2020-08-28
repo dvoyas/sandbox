@@ -10,6 +10,11 @@ def second_index(text: str, symbol: str) -> [int, None]:
     else:
         return text.find(symbol) + 1 + text[text.find(symbol)+1:].find(symbol)
 
+# THE BEST SOLUTION
+    try:
+        return text.index(symbol, text.index(symbol) + 1)
+    except ValueError:
+        return None
 
 if __name__ == '__main__':
     print('Example:')
