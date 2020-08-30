@@ -5,6 +5,7 @@ def date_time(time: str) -> str:
     h = 'hour' if int(time[11:13]) == 1 else 'hours'
     m = 'minute' if int(time[14:16]) == 1 else 'minutes'
 
+
     return time[0:2].lstrip('0') + ' ' + month[int(time[3:5])] + ' ' + time[6:10] + ' year ' + time[11:12].lstrip('0') + time[12:13] + ' ' + h + ' ' + time[14:15].lstrip('0') + time[15:16] + ' ' + m
 
 
