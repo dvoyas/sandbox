@@ -11,6 +11,7 @@ def date_time(time: str) -> str:
 # THE BEST SOLUTION
 # from datetime import datetime
 
+
 # def checkio(time):
 #     dt = datetime.strptime(time, '%d.%m.%Y %H:%M')
 #     hour = 'hour' if dt.hour == 1 else 'hours'
