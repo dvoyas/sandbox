@@ -8,6 +8,16 @@ def date_time(time: str) -> str:
 
     return time[0:2].lstrip('0') + ' ' + month[int(time[3:5])] + ' ' + time[6:10] + ' year ' + time[11:12].lstrip('0') + time[12:13] + ' ' + h + ' ' + time[14:15].lstrip('0') + time[15:16] + ' ' + m
 
+# THE BEST SOLUTION
+# from datetime import datetime
+
+
+# def checkio(time):
+#     dt = datetime.strptime(time, '%d.%m.%Y %H:%M')
+#     hour = 'hour' if dt.hour == 1 else 'hours'
+#     minute = 'minute' if dt.minute == 1 else 'minutes'
+#     return dt.strftime(f'%-d %B %Y year %-H {hour} %-M {minute}')
+
 
 if __name__ == '__main__':
     print("Example:")
