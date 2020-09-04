@@ -40,6 +40,24 @@ def checkio(matrix: List[List[int]]) -> bool:
 
     return False
 
+#THE BEST SOLUTION
+    N = len(matrix)
+    def seq_len(x, y, dx, dy, num):
+        if 0 <= x < N and 0 <= y < N and matrix[y][x] == num:
+            return 1 + seq_len(x + dx, y + dy, dx, dy, num)
+        else:
+            return 0
+
+    DIR = [(dx, dy) for dy in range(-1, 2)
+                    for dx in range(-1, 2)
+                    if dx != 0 or dy != 0]
+    for y in range(N):
+        for x in range(N):
+            for dx, dy in DIR:
+                if seq_len(x, y, dx, dy, matrix[y][x]) >= 4:
+                    return True
+    return False
+
 # OTHER SOLUTION
 # def check(numbers):
 #     num = numbers[0]
