@@ -23,7 +23,6 @@ def sum_by_types(items: list) -> Tuple[str, int]:
 #     for elem in a: accum[type(elem)] += elem
 #     return tuple(accum.values())
 
-
 if __name__ == '__main__':
     print("Example:")
     print(sum_by_types([]))
