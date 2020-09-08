@@ -11,6 +11,18 @@ def sum_by_types(items: list) -> Tuple[str, int]:
             i += item
     return (s, i)
 
+# THE BEST RESULT
+#     result = ['', 0]
+#     for item in items:
+#         result[isinstance(item, int)] += item
+#     return result
+
+
+# OTHER SOLUTION
+#     accum = {T: T() for T in (str, int)}
+#     for elem in a: accum[type(elem)] += elem
+#     return tuple(accum.values())
+
 
 if __name__ == '__main__':
     print("Example:")
