@@ -17,7 +17,6 @@ def translate(phrase):
 
         # res += res_word if res == '' else ' ' + res_word
 
-
     return res_word
 
 # OTHER SOLUTION
