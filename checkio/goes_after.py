@@ -6,10 +6,10 @@ def goes_after(word: str, first: str, second: str) -> bool:
 # return first+second in word and word.index(first)+1 == word.index(second)
 
 # THE BEST SOLUTION
-    try:
-        return word.index(second)-word.index(first) == 1
-    except ValueError:
-        return False
+#     try:
+#         return word.index(second)-word.index(first) == 1
+#     except ValueError:
+#         return False
 
 
 if __name__ == '__main__':
