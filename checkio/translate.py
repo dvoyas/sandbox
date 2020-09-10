@@ -25,6 +25,20 @@ def translate(phrase):
 #             phrase = phrase.replace(3*i, 2*i)
 #     return ' '.join( [ i[::2] for i in phrase.split() ] )
 
+# THE BEST SOLUTION
+    output = ""
+    c = 0
+
+    while c < len(phrase):
+        output += phrase[c]
+        if phrase[c] in VOWELS:
+            c = c + 3
+        elif phrase[c] == ' ':
+            c = c + 1
+        else:
+            c = c + 2
+
+
 
 if __name__ == '__main__':
     print("Example:")

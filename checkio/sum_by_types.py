@@ -11,7 +11,7 @@ def sum_by_types(items: list) -> Tuple[str, int]:
             i += item
     return (s, i)
 
-# THE BEST RESULT
+# THE BEST SOLUTION
 #     result = ['', 0]
 #     for item in items:
 #         result[isinstance(item, int)] += item
