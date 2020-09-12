@@ -5,6 +5,13 @@ def goes_after(word: str, first: str, second: str) -> bool:
 # OTHER SOLUTION
 # return first+second in word and word.index(first)+1 == word.index(second)
 
+# THE BEST SOLUTION
+#     try:
+#         return word.index(second)-word.index(first) == 1
+#     except ValueError:
+#         return False
+
+
 if __name__ == '__main__':
     print("Example:")
     print(goes_after('almaz', 'r', 'a'))
