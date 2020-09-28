@@ -3,38 +3,59 @@ class Warrior:
         self.health = health
         self.attack = attack
 
-        self.is_alive = True
+    @property
+    def is_alive(self):
+        return self.health > 0
 
 
 class Knight(Warrior):
-    def __init__(self, attack):
-        #self.health = health
-        self.attack = attack+2
-        super().__init__(self)
+    def __init__(self, health=50, attack=7):
+        Warrior.__init__(self, health=50, attack=7)
+
 
 def fight(unit_1, unit_2):
-    first = True
-    while unit_1.health > 0:
-        if unit_2 <= 0:
-            return True
-        elif first:
-            unit_1.attack -= 1
-            unit_2.health -= 1
-            first = False
-        else:
-            unit_2.attack -= 1
-            unit_1.health -= 1
-            first = True
-    return True
+    while True:
+        unit_2.health -= unit_1.attack
+        if not unit_2.is_alive:
+            break
+        unit_1.health -= unit_2.attack
+        if not unit_1.is_alive:
+            break
+    return unit_1.is_alive
+# OTHER SOLUTION
+#     class Warrior:
+#         def __init__(self):
+#             self.health = 50
+#             self.attack = 5
+#
+#         @property
+#         def is_alive(self):
+#             return self.health > 0
+#
+#     class Knight(Warrior):
+#         def __init__(self):
+#             super().__init__()
+#             self.attack = 7
+#
+#     def fight(unit_1, unit_2):
+#         while True:
+#             unit_2.health -= unit_1.attack
+#             if not unit_2.is_alive:
+#                 break
+#             unit_1.health -= unit_2.attack
+#             if not unit_1.is_alive:
+#                 break
+#         return unit_1.is_alive
+
 
 if __name__ == '__main__':
     #Theese "asserts" using only for self-checking and not necessary for auto-testing
-
     chuck = Warrior()
     bruce = Warrior()
     carl = Knight()
     dave = Warrior()
     mark = Warrior()
+
 
     assert fight(chuck, bruce) == True
     assert fight(dave, carl) == False
