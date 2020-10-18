@@ -15,11 +15,18 @@ class Knight(Warrior):
         Warrior.__init__(self, health=50, attack=7)
 
 class Army:
-    def __init__(self, unit):
-        self.unit = unit
+    def __init__(self):
+        self.unit = []
 
     def add_units(self, unit):
-        self.unit += unit
+        self.unit.append(Warrior)
+
+class Battle:
+    def __init__(self):
+        self.
+
+    def fight(self, army_1, army_2):
+
 
 def fight(unit_1, unit_2):
     while True:
@@ -31,27 +38,6 @@ def fight(unit_1, unit_2):
             break
     return unit_1.is_alive
 
-
-if __name__ == '__main__':
-    # These "asserts" using only for self-checking and not necessary for auto-testing
-
-    chuck = Warrior()
-    bruce = Warrior()
-    carl = Knight()
-    dave = Warrior()
-    mark = Warrior()
-    carl.attack
-
-    assert fight(chuck, bruce) == True
-    assert fight(dave, carl) == False
-    assert chuck.is_alive == True
-    assert bruce.is_alive == False
-    assert carl.is_alive == True
-    assert dave.is_alive == False
-    assert fight(carl, mark) == False
-    assert carl.is_alive == False
-
-    print("Coding complete? Let's try tests!")
 
 if __name__ == '__main__':
     # These "asserts" using only for self-checking and not necessary for auto-testing

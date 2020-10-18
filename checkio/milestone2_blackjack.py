@@ -72,7 +72,7 @@ class Hand:
         # THAN CHANGE MY ACE TO BE A 1 INSTEAD OF AN 11
         while self.value > 21 and self.aces:
             self.value -= 10
-            sellf.aces -= 1
+            self.aces -= 1
 
 
 test_deck = Deck()
