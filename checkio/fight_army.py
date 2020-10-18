@@ -15,8 +15,11 @@ class Knight(Warrior):
         Warrior.__init__(self, health=50, attack=7)
 
 class Army:
-    def __init__(self):
-        add_units
+    def __init__(self, unit):
+        self.unit = unit
+
+    def add_units(self, unit):
+        self.unit += unit
 
 def fight(unit_1, unit_2):
     while True:
